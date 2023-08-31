@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHero Tube</title>
 
-
     <!-- Scripts starts -->
 
     <!-- Tailwind  -->
@@ -18,9 +17,61 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File  -->
+    <link rel="stylesheet" href="style.css">
+
     <!-- Scripts end -->
-
-
   </head>
-  <body></body>
+
+  <body>
+    <!-- Navbar starts -->
+    <nav class="container mx-auto">
+      <div class="navbar bg-base-100 flex flex-col md:flex-row justify-between my-10">
+        <div class="">
+          <img src="Logo.png" alt="" />
+        </div>
+
+        <!-- Buttons starts  -->
+        <div>
+          <button class="btn btn-primary bg-gray-200 text-black border-none my-10 md:my-2">
+            Sort by view
+          </button>
+        </div>
+
+        <div>
+          <button onclick="blogbtn()" class="btn btn-primary bg-[#FF1F3D] border-none">Blog</button>
+        </div>
+      </div>
+      <!-- Buttons End  -->
+      <hr>
+    </nav>
+    
+    <!-- Navbar End -->
+
+
+
+    <!-- Main Starts  -->
+    <main class="container  mx-auto">
+
+        <!-- Button Section starts -->
+        <div id="btn-container" class="w-96 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  my-10 gap-20 ">
+            
+        </div>
+        <!-- Button Section End -->
+
+
+    </main>
+
+    <!-- JS file  -->
+    <script src="phero.js"></script>
+    <!-- Main End  -->
+  </body>
 </html>
