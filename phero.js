@@ -37,18 +37,16 @@ const displayVideos = async(id) => {
     const cardsContainer = document.getElementById("cards-container");
     cardsContainer.innerHTML = "";
 
-    // if(sort() === true ){
-    //     const dataArr = [];
-    //     data.forEach((ele) => {
-    //         const view = ele.others?.views;
-    //         const viewInt = parseInt(view)
-    //         dataArr.push(viewInt);
-           
-    //     })
-    //     dataArr.sort(function(a,b) {
-    //         return b - a;
+    // if(sort()){
+    //     data.sort(function(a,b) {
+    //         const viewStr1 = b.others?.view;
+    //         viewInt1 = parseInt(viewStr1)
+    //         const viewStr2 = a.others?.view;
+    //         viewInt2 = parseInt(viewStr2)
+    //         return viewInt1 - viewInt2;
     //     });     
-    //     console.log(dataArr);
+    //     console.log(data);
+        
     // }
 
     if(data.length > 0){
@@ -64,7 +62,7 @@ const displayVideos = async(id) => {
                 
         <div class="relative w-[312px]">
           <figure><img class="w-[400px] h-[200px] rounded-md" src="${item.thumbnail}" alt="Shoes" /></figure>
-          <div class="border-none rounded-md bg-[#171717] absolute right-2 bottom-4">
+          <div class="border-none rounded-md ${t ? 'bg-[#171717]' : 'bg-none'}   absolute m-0 p-0 right-2 bottom-4">
             <p class="text-[#FFFFFF] mx-2 my-1  text-xs font-normal"> ${t} </p>
           </div>
         </div>
@@ -124,9 +122,4 @@ const time = (sec) => {
        return '';
     else
        return t;
-}
-
-const sort = () => {
-    const isSort = true;
-    return isSort;
 }
